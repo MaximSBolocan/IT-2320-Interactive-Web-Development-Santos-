@@ -1,8 +1,8 @@
 body {
     
-    background: url("../IMAGE/IMG_2774.jpg");
+    background: url("../IMAGE/bg.png");
 	background-position:top;
-	background-repeat:no-repeat;
+	background-repeat:repeat;
 	background-attachment:scroll;
 	background-color: #99ddff;
 	
