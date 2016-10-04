@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
 
-    //alert("pagina so reinoit");
+    
     var cells = $(".cell");
     var colorCount = 0;
-    //var Piece=$(".piece")
+    
 
     for (var i = 0; i < cells.length; i++) {
         var cell = $(cells[i]);
@@ -12,38 +12,61 @@
         colorCount += isNextRow ? 2 : 1;
         cell.css("background-color", isDark ? "navy" : "white");
     }
-    
 
-    mainPage.highlightEvent();
-   
-   
-});
-
-var mainPage = {};
-
-mainPage.highlightEvent= function()
-{
-    var newPiece=null;
-    var curentpiece = $(".piece");
-    
-    curentpiece.click(function()
+    $(".cell").click(function ()
     {
-       if (curentpiece!=newPiece)
-        {
-          $(this).css("border", "3px solid black");
-          newPiece = curentpiece;
-        }
-        else  
-        {
-            curentpiece = curentpiece.css("border", "");
-            newPiece=null;
-        }
         
-    })
+        if ($(this).hasClass("red"))
+        {
+            //highlightEventON($(this))
+            
+            $(this).addClass("highlightRed");
+            $(this).removeClass("red");
+            highlightEventON($(this));
+        }
+        else if ($(this).hasClass("highlightRed"))
+        {
+            highlightEventOFF($(this));
+            $(this).addClass("red");
+            $(this).removeClass("highlightRed");
+        }
 
+        else if ($(this).hasClass("black")) {
+            highlightEventON($(this));
+             $(this).addClass("highlightBlack");
+             $(this).removeClass("black");
+        }
+        else if ($(this).hasClass("highlightBlack")) {
+            highlightEventOFF($(this));
+            $(this).addClass("black");
+            $(this).removeClass("highlightBlack");
+        }
+        else if ($(this).hasClass()) {
 
-    
-
-    
+        }
+       
      
-}
+        
+        
+        
+    });
+    
+   
+  
+})
+
+    function  highlightEventON(a)
+    {
+        
+        a.css("border", "solid lime")
+        alert("on")
+
+
+
+    }
+    function highlightEventOFF(a)
+    {
+            a.css("border", "0px");
+            alert("OFF");
+       
+    }
