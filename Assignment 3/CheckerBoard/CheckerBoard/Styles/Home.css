@@ -2,7 +2,7 @@
 {
     display: table;
     border: 1px solid black;
-    z-index: 2;
+    
 }
 
 .home > .board > .row
@@ -16,16 +16,7 @@
     height: 80px;
     border: 1px solid black;
     display: inline-block;
-    z-index: 5;
-
-}
-ome > oard > .row > .highlight
-{
-    width: 80px;
-    height: 80px;
-    border: 3px solid black;
-    display: inline-block;
-}
+ }
 
 .piece
 {
@@ -39,11 +30,19 @@ ome > oard > .row > .highlight
 .red
 {
     background-image: URL('../images/red.png');
-  
+    
+}
+ .highlightRed{
+    background-image: URL('../images/red.png');
+    border:3px solid lime;
 }
 
 .black
 {
     background-image: URL('../images/black.png');
-  
+   
+}
+ .highlightBlack{
+    background-image: URL('../images/black.png');
+    border:3px solid lime;
 }
