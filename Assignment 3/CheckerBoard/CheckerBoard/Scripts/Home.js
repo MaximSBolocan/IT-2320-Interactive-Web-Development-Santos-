@@ -17,9 +17,7 @@
     {
         
         if ($(this).hasClass("red"))
-        {
-            //highlightEventON($(this))
-            
+        {                       
             $(this).addClass("highlightRed");
             $(this).removeClass("red");
             highlightEventON($(this));
@@ -57,16 +55,11 @@
 
     function  highlightEventON(a)
     {
-        
         a.css("border", "solid lime")
         alert("on")
-
-
-
-    }
+     }
     function highlightEventOFF(a)
     {
             a.css("border", "0px");
             alert("OFF");
-       
     }
