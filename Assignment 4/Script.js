@@ -45,7 +45,7 @@ document.body.innerHTML += "<br/>"
 //MainPage.TeamA.persons.SetName(steve)
 // alert("")
 
-document.body.innerHTML = MainPage.TeamA.steve.GetName();
+//document.body.innerHTML = MainPage.TeamA.steve.GetName();
 //document.body.innerHTML += "<br/>"
 //document.body.innerHTML += MainPage.Bob.GetName();
 //document.body.innerHTML += "<br/>"
