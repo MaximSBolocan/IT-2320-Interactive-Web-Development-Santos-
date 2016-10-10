@@ -1,34 +1,53 @@
-var MainPage={};
-MainPage.Person = function(firstName, lastName)
-{
-	this.FirstName = firstName;
-	this.LastName = lastName;
-	
+ var MainPage={};
+ 
+ MainPage.Team ={firstPlayer:"Iron Man",secondPlayer:"Hulk",thirdPlayer:"SpiderMan",fouthPlayer:"Black Widow"}
+document.body.innerHTML =MainPage.Team.firstPlayer;
+document.body.innerHTML += "<br/>"
+document.body.innerHTML+=MainPage.Team.secondPlayer;
+document.body.innerHTML += "<br/>"
+document.body.innerHTML +=MainPage.Team.thirdPlayer;
+document.body.innerHTML += "<br/>"
+document.body.innerHTML +=MainPage.Team.fouthPlayer;
+document.body.innerHTML += "<br/>"
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
-	//this.SetFirstName = function(name)
-	//{
-		//this.FirstName = name;
-	//}
-}
-MainPage.Person.prototype.GetFullName = function()
-{
-	return this.FirstName + " " + this.LastName;
-}
+// MainPage.Team = function ( teamName) 
+// {  
+ // this.TeamName =teamName;
+ // this.persons= new MainPage.Player();
+ // this.persons.SetName(steve);
+ // }
 
-MainPage.Team = function ( fName ,lName  )
-{
-	this.NewPerson= new MainPage.Person(fName,lName)
+
+
+// MainPage.Team.prototype.GetTeamName = function()
+// {
+	// return this.TeamName;
+// }
+// MainPage.Player=function()
+// {
 	
+	// this.LastName;
+// }
+// MainPage.Player.prototype.SetName=function(name)
+// {
 	
-}
-MainPage.Team.prototype.GetFullTeam = function()
-{ 
-  for (var i=0;i<=this.length;i++)
-  {
-	return Team.FirstName + " " + Team.LastName;
-  }
-}
-//MainPage.Alan = new MainPage.Person("Alana", "Santos");
-//document.body.innerHTML = MainPage.Alan.GetFullName();
-MainPage.TeamA= new MainPage.Team("Alana", "Santos");
-document.body.innerHTML=MainPage.TeamA.GetFullTeam();
+	// this.LastName=name
+// }
+
+
+// MainPage.Player.prototype.GetName =function()
+// {
+	// return this.LastName;
+// }
+ // MainPage.TeamA= new MainPage.Team("TeamA");
+//MainPage.TeamA.persons.SetName(steve)
+// alert("")
+
+document.body.innerHTML = MainPage.TeamA.steve.GetName();
+//document.body.innerHTML += "<br/>"
+//document.body.innerHTML += MainPage.Bob.GetName();
+//document.body.innerHTML += "<br/>"
+//document.body.innerHTML += MainPage.Steve.GetName();
+//document.body.innerHTML += "<br/>"
