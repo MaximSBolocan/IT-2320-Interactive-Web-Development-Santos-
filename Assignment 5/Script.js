@@ -148,13 +148,14 @@ function createSchools()
 		
 	}
  }
-// function addGender(school, name, gender )
+// function addGender(school, name, gender )//this function is not finished i have to think about it 
 // {   
     // var theSchool=school;
 	// var 
 	// var Gender= gender;
 	// if (schools.)
 // }
+
  $(document).ready(function()
  
  {
