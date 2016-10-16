@@ -1,0 +1,123 @@
+
+
+{"Schools":[
+{ "name":"1rst School",
+ "nrOfClasses":"4",
+ "classes":[
+     {"className":"A",
+	 "students":[
+	             {
+	              "name":"Felicia",
+	              "grade":"8"
+				  
+	             },
+				 {"name":"Mark",
+	              "grade":"9"
+				 },
+	             {"name":"Steve",
+	              "grade":"7"
+				 }
+				 ]
+	 },
+	 {"className":"B",
+	 "students":[
+	             {
+	              "name":"Bob",
+	              "grade":"7"
+	             },
+				 {"name":"Mark JR",
+	              "grade":"8"
+				 },
+	             {"name":"Jay",
+	              "grade":"6"
+				 }
+				 ]
+	 },
+	 {"className":"C",
+	  "students":[
+	             {
+	              "name":"Tom",
+	              "grade":"5"
+	             },
+				 {"name":"Daniela",
+	              "grade":"7"
+				 },
+	             {"name":"Stefan",
+	              "grade":"7"
+				 }
+				 ]
+	 },
+	 {"className":"D",
+	 "students":[
+	             {
+	              "name":"Bernie",
+	              "grade":"6"
+	             },
+				 {"name":"Bill",
+	              "grade":"7"
+				 },
+	             {"name":"Hillary",
+	              "grade":"6"
+				 },
+				 {
+	              "name":"Thrump",
+	              "grade":"5"
+	             }
+				 ]
+	 }
+]},
+ 
+ { "name":"2nd School",
+ "nrOfClasses":"3",
+ "classes":[
+ {"className":"A",
+	 "students":[
+	             {
+	              "name":"Antony",
+	              "grade":"6"
+	             },
+				 {"name":"Marcus",
+	              "grade":"7"
+				 }
+				 ]
+	 },
+	 {"className":"B",
+	 "students":[
+	             {
+	              "name":"Michaela",
+	              "grade":"10"
+	             },
+				 {"name":"Antonya",
+	              "grade":"7"
+				 },
+	             {"name":"Jovany",
+	              "grade":"7"
+				 },
+				 {
+					 "name":"Anna",
+					 "grade":"7"
+				 }
+				 ]
+	 },
+	 {"className":"C",
+	 "students":[
+	             {
+	              "name":"Magdalena",
+	              "grade":"9"
+	             },
+				 {"name":"Mark",
+	              "grade":"9"
+				 },
+	             {"name":"Estela",
+	              "grade":"7"
+				 },
+				 {"name":"Aaron",
+	              "grade":"8"
+				 }
+				 ]
+	 }
+ ]}
+ ]}
+ 
+ 
+ 
