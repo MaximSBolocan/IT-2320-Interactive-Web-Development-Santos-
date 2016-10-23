@@ -17,7 +17,7 @@ namespace Assignment8.Controllers
         public JsonResult GetPlayerInformation(RequestModel model)
         {
             var response = new ResponseModel();
-            response.PlayerNumber = model.PlayerNumber;
+            response.PlayerNr = model.PlayerNumber;
 
             if (model.PlayerNumber == 23)
             {

@@ -4,7 +4,7 @@ namespace Assignment8.Models
 {
     public class ResponseModel
     {
-        public int PlayerNumber;
+        public int PlayerNr;
         public string PlayerName;
     }
 }
