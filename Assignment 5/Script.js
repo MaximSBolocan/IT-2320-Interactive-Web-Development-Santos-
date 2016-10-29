@@ -126,7 +126,7 @@ function createSchools()
 	 for (var i=0; i<schools.CitySchools.length; i++)
 		// alert(schools.CitySchools[i].name);
 	{    var Schools=schools.CitySchools[i];
-	       
+	       document.body .getElementsByClassName
                  document.body.innerHTML+="School name: "+""+Schools.name+"";
 				 document.body.innerHTML+="<br/>";
          for (var j=0; j<Schools.classes.length; j++)

@@ -1,0 +1,86 @@
+body {
+    
+    background: url("Images/pentagon.png");
+	background-position:top;
+	background-repeat:repeat;
+	background-attachment:scroll;
+	
+}
+.MainClass
+{
+	width: 100%;
+	border: 1px solid black;
+}
+@media screen and (min-width: 720px)
+{
+	.MainClass .topSpace { 
+	height: 100px;
+	background-color: grey ;
+	opacity:0.3;
+	}
+	.MainClass .middleSpace { 
+	height: 800px;
+	}
+	.MainClass .middleSpace .navigationBackground
+	{
+		width:100%;
+		background-color:#42f49b;
+		height: 75px;
+		margin-top:10px;
+	}
+	.MainClass .middleSpace .navigationBackground .navigation
+	{
+		
+		height: 75px;
+		width:19%;
+		opacity:0.5;
+		float :left;
+		text-align:center;
+		margin-left:7px;
+		
+	}
+	.MainClass .middleSpace .mainBody
+	{
+		width:50%;
+		border :2px solid red;
+	}
+	.MainClass .middleSpace .mainBody .textStyle
+	{
+		font-size:25px;
+        font-family:serif,sans-serif,italic,oblique,normal;
+        font-weight:bold;
+	}
+}
+@media screen and (max-width: 719px)
+{
+	.MainClass .topSpace { 
+	height: 100px;
+	background-color: grey ;
+	opacity:0.5;
+	}
+	.MainClass .middleSpace { 
+	height: 800px;
+	
+	}
+	
+	.MainClass .middleSpace .navigation
+	{
+		width:100%;
+		height: 50px;
+		background-color:#42f49b;
+		opacity:0.5;
+		border-left:1px solid blue;
+		margin-top:10px;
+		text-align:center;
+	}
+	.MainClass .middleSpace .mainBody
+	{
+		width:100%;
+		border: 2px solid green;
+        background-color:purple;
+       	font-size:40px;
+        font-family:serif,sans-serif,italic,oblique,normal;
+        font-weight:bold;	 
+	}
+}
+
