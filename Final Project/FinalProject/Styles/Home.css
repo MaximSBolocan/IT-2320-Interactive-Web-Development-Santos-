@@ -1,0 +1,31 @@
+﻿.Main
+{
+	width: 100%;
+    height:1920px;
+	border: 1px ;
+}
+.Main .text{
+    color:black;
+    font-size:35px;
+    font-weight:200;
+
+}
+.Main .empty{
+    height:1800px;
+}
+.Main .header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+	border: 2px #e6e600;
+}
+.Main .footer {
+    background-color:#21211e;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+	opacity:0.7;
+	font-family:italic,oblique;
+}
