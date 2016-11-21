@@ -24,6 +24,7 @@ Main.Picture10 = new Image()
 Main.Picture10.src = "Pictures/10.jpg";
 Main.X=0;
 Main.Y=0;
+var dragXOffset = 0;
 Main.Canvas.onmousemove = function(event)
 {
 	if (event.offsetX)
@@ -69,25 +70,21 @@ Main.Box = function(x, y, w, h)
 		Main.Context.drawImage(image, this.X, this.Y, this.Width, this.Height);
 	}
 }
-Main.MouseMove= function()
-{
-	x=Main.X - dragXOffset
+Main.MouseMove= function(event)
+{   
+	x1=Main.X
+	x2=x1-Main.X;
 	
-	if (x<0)
+	if (x2<0)
 	{
-		for (var i=0; i<Main.Boxes.length; i++)
-	   {
-		 Main.Boxes[i].DrawAsImage(Main.Pictures[i+1]);
-		 alert ("moved left")
-	   }
+		
+	   alert ("moved left")
 	}
-	else if (x>0)
+	else if (x2>0)
 	{
-		for (var i=0; i<Main.Boxes.length; i++)
-	   {
-		Main.Boxes[i].DrawAsImage(Main.Pictures[i-1]);
+	
 		alert("moved rigth")
-	   }
+	   
 		
 	}
 }
@@ -128,10 +125,10 @@ Main.Animate = function()
 	Main.Context.fillStyle = "#e8dede";
     Main.Context.fillRect(0,240,1300,120)
 	Main.PicturePlace();
-	Main.Action();
-	
 	
     Main.Context.fillText("X: " + Main.X + "  Y: " + Main.Y, 100, 150);
+	Main.Action();
+	
 	requestAnimFrame(function() { Main.Animate(); });
 }
 
