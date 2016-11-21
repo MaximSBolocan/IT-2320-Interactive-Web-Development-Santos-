@@ -1,0 +1,17 @@
+
+
+.Main 
+{
+	width:125px;
+	height:125px;
+	background-color:red;
+}
+.Main .pictureActive
+{
+	
+}
+@keyframes example {
+   0%   {}
+    
+    100% {}
+}
