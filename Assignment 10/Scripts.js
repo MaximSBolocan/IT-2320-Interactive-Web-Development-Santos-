@@ -98,8 +98,8 @@ Main.Action=function()
 		ctx.lineTo(650,300);
 		Main.Context.stroke();
 		/*Main.Context.fillStyle =
-		Main.Context.fillRect(550,250, 100, 100);
-		alert("thisis working")*/
+		Main.Context.fillRect(550,250, 100, 100);*/
+		alert("thisis working")
 	}
 }
 

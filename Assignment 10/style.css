@@ -1,17 +1,5 @@
-
-
-.Main 
+canvas
 {
-	width:125px;
-	height:125px;
-	background-color:red;
+	border: 2px solid green;
 }
-.Main .pictureActive
-{
-	
-}
-@keyframes example {
-   0%   {}
-    
-    100% {}
-}
+
