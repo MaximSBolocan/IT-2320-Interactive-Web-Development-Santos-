@@ -69,6 +69,29 @@ Main.Box = function(x, y, w, h)
 		Main.Context.drawImage(image, this.X, this.Y, this.Width, this.Height);
 	}
 }
+Main.MouseMove= function()
+{
+	x=Main.X - dragXOffset
+	
+	if (x<0)
+	{
+		for (var i=0; i<Main.Boxes.length; i++)
+	   {
+		 Main.Boxes[i].DrawAsImage(Main.Pictures[i+1]);
+		 alert ("moved left")
+	   }
+	}
+	else if (x>0)
+	{
+		for (var i=0; i<Main.Boxes.length; i++)
+	   {
+		Main.Boxes[i].DrawAsImage(Main.Pictures[i-1]);
+		alert("moved rigth")
+	   }
+		
+	}
+}
+
 
 
 Main.Boxes = [
@@ -93,13 +116,8 @@ Main.Action=function()
 {
 	if(Main.X>550&&Main.X<650&&Main.Y>250&&Main.Y<350)
 	{
-		Main.Context.beginPath();
-		Main.Context.moveTo(Main.X,Main.Y);
-		ctx.lineTo(650,300);
-		Main.Context.stroke();
-		/*Main.Context.fillStyle =
-		Main.Context.fillRect(550,250, 100, 100);*/
-		alert("thisis working")
+		Main.MouseMove();
+		
 	}
 }
 
@@ -113,7 +131,7 @@ Main.Animate = function()
 	Main.Action();
 	
 	
-     Main.Context.fillText("X: " + Main.X + "  Y: " + Main.Y, 100, 150);
+    Main.Context.fillText("X: " + Main.X + "  Y: " + Main.Y, 100, 150);
 	requestAnimFrame(function() { Main.Animate(); });
 }
 
