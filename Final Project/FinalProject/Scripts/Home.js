@@ -9,8 +9,10 @@ $(document).ready(function () {
 Main.createLogin = function () {
     $("#login").remove();
     $("#account").remove();
+    $("#button").remove();
     var login = "User Name <br><input type='text' value='' id='text' min='6'> <br> Password<br> <input type='password' value='' min='6' id='password'>"
     var button = "<br><button  onclick='Main.Login()'>Login</button>"
+
     $("#text").prepend(login, button);
 }
  Main.createAccount=function()
@@ -83,13 +85,10 @@ Main.createLogin = function () {
                   $(".empty").append(deserializedData.EmailCon);
                   $(".empty").append(button)
                   $("#button").click(Main.createLogin);
-                  $("#button").remove();
-                 
-
+                  
               }
-
-
           })
+         
   }
   Main.AccountInfo=function(name)
   {
