@@ -1,19 +1,40 @@
-﻿.Main
+﻿
+body
+{
+ background-color:#008c95;
+}
+.Main
 {  
-     float:inherit;
+     float:left;
 	width: 100%;
-    height:1920px;
+    height:900px;
 	border: 1px ;
 }
 .Main .text{
-    
+    width:300px;
     color:black;
     font-size:35px;
     font-weight:200;
+    float:left;border:2px solid red;
+
+}
+.Main .form
+{
+    width:20%;
+    color:black;
+    font-size:20px;
+    font-weight:100;
+    border:2px solid black;
+    float:none;
+    display:block;
 
 }
 .Main .empty{
-    height:800px;
+    width:100%;
+    
+    border:1px solid yellow;
+    float:left;
+
 }
 .Main .header {
     background-color:black;
@@ -22,7 +43,7 @@
     padding:5px;
 	border: 2px #e6e600;
 }
-.Main .footer {
+footer {
     background-color:#21211e;
     color:white;
     clear:both;
@@ -31,9 +52,16 @@
 	opacity:0.7;
 	font-family:italic,oblique;
 }
-.Main .output
-{
-    border:2px #e6e600;
+    .Main .top {
+        
+        height:20%;
+        width:100%;
+        border:2px solid red;
     
-    height:1000px;
-}
+    }
+    .Main .sied{
+        width:35%;
+       
+        border:3px solid black;
+       float:left;
+    }
