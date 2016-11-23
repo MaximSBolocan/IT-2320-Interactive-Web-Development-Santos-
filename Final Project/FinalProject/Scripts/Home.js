@@ -83,9 +83,11 @@ Main.createLogin = function () {
                   $(".empty").append(deserializedData.EmailCon);
                   $(".empty").append(button)
                   $("#button").click(Main.createLogin);
+                  $("#button").remove();
                  
 
               }
+
 
           })
   }
@@ -113,11 +115,11 @@ Main.createLogin = function () {
                 password = textPayload.account.password;
                 email = textPayload.account.emailadd;
    /////////////////////////////////////////////////////////////////////////////////////////
-               $(".empty").append("User Name:<input type='text' id='user' value='' class='form' readonly> ");
+               $(".empty").append("<p>User Name:<input type='text' id='user' value='' class='form' readonly></p> ");
                $("#user").val(userName);
-               $(".empty").append("Password:<input type='text' id='password' value=''class='form' >");
+               $(".empty").append("<p>Password:<input type='text' id='password' value=''class='form' ></p>");
                $("#password").val(password);
-               $(".empty").append("Email:<input type='text' id='email' value=''class='form'  >");
+               $(".empty").append("<p>Email:<input type='text' id='email' value=''class='form'  ></p>");
                $("#email").val(email);
                $(".empty").append(textError, textMessage, button);
                $("#button").click(UpdateCall);
@@ -128,30 +130,40 @@ Main.createLogin = function () {
 
       UpdateCall = function () {
           alert("begin")
-          
+          var tag1 = "password"
+          var tag2 = "emailadd"
+          if ($('#email[value=""]').val() != email && $('#password[value=""]').val() != password)
+          {
+              var newEmail = $('#email[value=""]').val();
+              var newPasword = $('#password[value=""]').val();
+              Main.UpdateAccount(userName, tag1, newPasword);
+              Main.UpdateAccount(userName, tag2, newEmail)
+           }
       if ($('#password[value=""]').val() != password) {
           alert("diferentpass")
-          var newPasword = $('#password[value=""]').val()
-              Main.UpdateAccount(userName,password, newPasword)
+          var newPasword = $('#password[value=""]').val();
+          Main.UpdateAccount(userName,tag1, newPasword);
           }
-          alert("changed pass")
+          
       if ($('#email[value=""]').val() != email)
           {
-              alert("diferentmail")
-              Main.UpdateAccount(userName,email, $('#email[value=""]'))
-          }
-      else
-      {}
-          alert("no changes")
+          alert("diferentmail")
+          var newEmail = $('#email[value=""]').val();
+          Main.UpdateAccount(userName,tag2, newEmail)
       }
       
+      
+      $("#button").remove();
+      $("p").remove();
+      }
+     
 
   }
   Main.UpdateAccount= function(name,elementname,elementvalue)
   {
 
      alert("start")
-      var userName = name;
+      var user = name;
       var elementName=elementname;
       var elementValue=elementvalue;
 
@@ -160,7 +172,7 @@ Main.createLogin = function () {
           url: "Home/AddOrUpdateElement",
           data:
                 {
-                    Username: userName,
+                    Username: user,
                     ElementName:elementName,
                     ElementValue:elementValue
                 },
@@ -172,8 +184,20 @@ Main.createLogin = function () {
               var textMessage = "Message:" + deserializedData.Message + "<br>";
               var textPayload = JSON.parse(deserializedData.Payload);
               userName = textPayload.account.username;
-              var newPassword = "<div>Password: +textPayload.account.password</div>";
-              var newEmail = "Email: " + textPayload.account.emailadd;
+              password = textPayload.account.password;
+              email = textPayload.account.emailadd;
+              $("#user").remove()
+              $("#password").remove()
+              $("#email").remove()
+              /////////////////////////////////////////////////////////////////////////////////////////
+              $(".empty").append("User Name:<div  id='user' class='form' ></div> ");
+              $("#user").append(userName);
+              $(".empty").append("Password:<div  id='password' class='form' ></div>");
+              $("#password").append(password);
+              $(".empty").append("Email:<div id='email' class='form'  ></div>");
+              $("#email").append(email);
+              $(".empty").append(textError, textMessage);
+              
               /////////////////////////////////////////////////////////////////////////////////////////
           }
 
