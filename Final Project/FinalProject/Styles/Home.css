@@ -17,6 +17,8 @@ body
     font-weight:200;
     float:left;
     display:block;
+	background-color:white;
+    border-radius:7px;
 
 }
 .Main .form
