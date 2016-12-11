@@ -48,7 +48,7 @@ Main.createLogin = function () {
               $("#info").remove();
               $("#text").append("<div id='info'></div>")
               if (message == control2) {
-                  alert("succes")
+                  alert("Succes")
                   Main.AccountInfo(userName)
 
               }
@@ -90,6 +90,8 @@ Main.createLogin = function () {
               userName = textPayload.account.username;
               password = textPayload.account.password;
               email = textPayload.account.emailadd;
+              $("#info").remove()
+              $("#text").append("<div id='info'></div>")
               $("#info").append("User Name:<div  id='user' class='form' ></div> ");
               $("#user").append(userName);
               $("#info").append("Password:<div  id='password' class='form' ></div>");
@@ -129,14 +131,17 @@ Main.createLogin = function () {
             
              
              if ($('#password[value=""]').val() != password) {
-                 alert("diferentpass")
+                 
                  var newPasword = $('#password[value=""]').val();
+                 
                  Main.UpdateAccount(userName, tag1, newPasword);
+
              }
 
              if ($('#email[value=""]').val() != email) {
-                 alert("diferentmail")
+                
                  var newEmail = $('#email[value=""]').val();
+                 
                  Main.UpdateAccount(userName, tag2, newEmail)
              }
              else {
@@ -192,7 +197,7 @@ Main.createLogin = function () {
      var password = $('#password[value=""]').val()
      var email = $('#email[value=""]').val()
      var emailCo = $('#emailC[value=""]').val()
-     /*alert("startCreating")*/
+     
      $.ajax
       ({
           url: "Home/CreateAccount",
